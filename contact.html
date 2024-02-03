@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>
+            Tshepiso Life Captures
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+<style>
+   body{
+    background-image: url(./images/nature-desktop-wallpaper-hd-free-download.jpg);
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+    display: flex;
+    
+  }
+  form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+  h1{
+    color: white;
+  }
+  hr{
+    color: white
+  }
+  footer{
+    align-items: center;
+    position: flex;
+    width: 100%;
+    color: white;
+    background: black;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <img src="./images/icon.png" alt="Logo" width="45" height="45" class="d-inline-block align-text-top">
+        Tshepiso Captures
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="servicePage.html">Service</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+<center>
+<h1>Contact Page</h1>
+</center>
+<hr>
+
+<form id="signupForm" onsubmit="return validateForm()">
+  <input type="text" id="firstName" placeholder="First Name" required>
+  <input type="text" id="lastName" placeholder="Last Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="submit" value="Sign Up">
+</form>
+
+<script>
+  function validateForm() {
+      var firstName = document.getElementById('firstName').value;
+      var lastName = document.getElementById('lastName').value;
+      var email = document.getElementById('email').value;
+
+      if (firstName === "" || lastName === "" || email === "") {
+          alert("Please fill in all fields.");
+          return false;
+      }
+
+      // Additional validation logic if needed
+
+      // If all fields are populated, submit the form
+      // You can send the form data to your desired destination here
+      // For example: using AJAX to send the data to a server
+      return true;
+  }
+</script>
+
+
+<form id="contactForm" onsubmit="return sendEmail()">
+  <input type="text" id="userName" placeholder="Your Name" required>
+  <input type="email" id="userEmail" placeholder="Your Email" required>
+  <textarea id="message" placeholder="Your Message" required></textarea>
+  <input type="submit" value="Send Message">
+</form>
+
+<script>
+  function sendEmail() {
+      var userName = document.getElementById('userName').value;
+      var userEmail = document.getElementById('userEmail').value;
+      var message = document.getElementById('message').value;
+
+      if (userName === "" || userEmail === "" || message === "") {
+          alert("Please fill in all fields.");
+          return false;
+      }
+
+      // Additional logic to send email (this is generally handled by a server-side script)
+
+      // For example: you can use JavaScript to construct an email message and send it through an API or a server-side script
+      // This typically involves using AJAX or submitting the form to a server-side endpoint
+
+      // After sending the email, you can redirect the user or show a success message
+      alert("Message sent successfully!");
+      return true;
+  }
+</script>
+
+
+
+</div>
+
+<footer>
+  <div class="waves ">
+  <h4 >Contact information</h4>
+  <ul>
+    <li>Student: Tshepiso Kekana</li>
+    <li>Email: tshepisoworkload@gmail.com</li>
+    <li>Stundent Number: 30HA2108955</li>
+    
+  
+  </ul>
+  
+  
+  </div>
+  </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>
